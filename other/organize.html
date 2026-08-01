@@ -1,2 +1,28 @@
-<title>Redirecting...</title>
-<meta http-equiv="refresh" content="0; URL=https://script.google.com/macros/s/AKfycbyaUc5UC6uPNyPrqHC2DQNiPfEov6alrmmB9QbQtyYg_WMH5oQZo3qux9wkNicuXozY/exec" />
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      var GAS_EXEC_URL = 'https://script.google.com/macros/s/AKfycbyaUc5UC6uPNyPrqHC2DQNiPfEov6alrmmB9QbQtyYg_WMH5oQZo3qux9wkNicuXozY/exec';
+
+      var incoming = new URLSearchParams(window.location.search);
+      var target = new URL(GAS_EXEC_URL);
+
+      incoming.forEach(function (value, key) {
+        target.searchParams.set(key, value);
+      });
+
+      window.location.replace(target.toString());
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; URL=https://script.google.com/macros/s/AKfycbyaUc5UC6uPNyPrqHC2DQNiPfEov6alrmmB9QbQtyYg_WMH5oQZo3qux9wkNicuXozY/exec">
+  </noscript>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
