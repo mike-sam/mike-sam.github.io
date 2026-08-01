@@ -6,6 +6,7 @@
   <title>Redirecting...</title>
   <script>
     (function () {
+      // 支援 ?cat=...&subcat=... 以及 ?ppid=123（轉發至 GAS 查 QR Sheet）
       var GAS_EXEC_URL = 'https://script.google.com/macros/s/AKfycbyaUc5UC6uPNyPrqHC2DQNiPfEov6alrmmB9QbQtyYg_WMH5oQZo3qux9wkNicuXozY/exec';
 
       var incoming = new URLSearchParams(window.location.search);
@@ -18,9 +19,6 @@
       window.location.replace(target.toString());
     })();
   </script>
-  <noscript>
-    <meta http-equiv="refresh" content="0; URL=https://script.google.com/macros/s/AKfycbyaUc5UC6uPNyPrqHC2DQNiPfEov6alrmmB9QbQtyYg_WMH5oQZo3qux9wkNicuXozY/exec">
-  </noscript>
 </head>
 <body>
   <p>Redirecting...</p>
